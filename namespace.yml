@@ -1,0 +1,7 @@
+#To create new namespace with cli command :- kubectl create namespace "<new namespace name>"
+#To switch into the new namespace via Cli command kubectl config set-context --current --namespace="<new namespace name>"
+#To check current & default namespace :- kubectl config view | grep namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+     name: vote

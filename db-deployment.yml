@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+spec:
+  selector:
+    matchLabels:
+      name: db-deployment
+  template:
+    metadata:
+      name: db-deployment
+    spec:
+      containers:
+        - image: postgres:9.4
+          name: db-deployment
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: db-data
+      volumes:
+        - name: db-data
+          emptyDir: {}

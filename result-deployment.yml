@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result-deployment
+spec:
+  selector:
+    matchLabels:
+      name: result-deployment
+  template:
+    metadata:
+      name: result-deployment
+    spec:
+      containers:
+        - image:
+          name: result-deployment
