@@ -9,6 +9,8 @@ spec:
    template:
       metadata:
         name: redis-deployment
+        labels:
+          name: redis-deployment
       spec:
         containers:
             - image: redis:alpine

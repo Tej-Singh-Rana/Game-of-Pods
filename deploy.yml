@@ -13,6 +13,6 @@ spec:
                     name: vote-deployment
            spec:
                 containers:
-                  - image:
+                  - image: kodekloud/examplevotingapp_vote:before
                     name: vote-deployment
 #export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}') to get the node port

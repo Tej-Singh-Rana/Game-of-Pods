@@ -10,13 +10,13 @@ spec:
        nodePort: 31000
    selector:
        name: vote-deployment
----
-apiVersion: v1
-kind: Endpoints
-metadata:
-     name: vote-service
-subsets:
-    - addresses:
-         - ip:
-      ports:
-        - port:
+# ---
+# apiVersion: v1
+# kind: Endpoints
+# metadata:
+#      name: vote-service
+# subsets:
+#     - addresses:
+#          - ip:
+#       ports:
+#         - port:

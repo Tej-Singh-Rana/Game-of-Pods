@@ -6,10 +6,16 @@ spec:
    selector:
        matchLabels:
            name: worker
+           name: redis-deployment
+           name: db-deployment
    template:
       metadata:
         name: worker
+        labels:
+          name: redis-deployment
+          name: db-deployment
+          name: worker
       spec:
         containers:
-            - image: 
+            - image: kodekloud/examplevotingapp_worker
               name: worker

@@ -9,7 +9,9 @@ spec:
   template:
     metadata:
       name: result-deployment
+      labels:
+        name: result-deployment
     spec:
       containers:
-        - image:
+        - image: kodekloud/examplevotingapp_result:before
           name: result-deployment
