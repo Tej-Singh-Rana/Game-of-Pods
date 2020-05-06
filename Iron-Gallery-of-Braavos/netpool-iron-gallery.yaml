@@ -6,21 +6,14 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      run: iron-gallery
+      db: mariadb
   policyTypes:
   - Ingress
   ingress:
   - from:
-    - ipBlock:
-        cidr: 172.17.0.0/16
-        except:
-        - 172.17.1.0/24
-    - namespaceSelector:
-        matchLabels:
-          namespace: default
     - podSelector:
         matchLabels:
-          db: mariadb
+          run: iron-gallery
     ports:
     - protocol: TCP
       port: 3306
