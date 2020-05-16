@@ -41,7 +41,7 @@ spec:
       volumes:
       - name: mysql-vol
         emptyDir: {}
-      - name: hostPath
+      - name: hostpath
         hostPath:
           path: /drupal-mysql-data
           type: DirectoryOrCreate 

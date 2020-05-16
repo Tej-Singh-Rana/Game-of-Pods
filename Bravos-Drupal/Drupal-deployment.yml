@@ -42,7 +42,7 @@ spec:
           emptyDir: {}  
         - name: data
           emptyDir: {}
-        - name: hostPath
+        - name: hostpath
           hostPath:
             path: /drupal-data
             type: DirectoryOrCreate  
