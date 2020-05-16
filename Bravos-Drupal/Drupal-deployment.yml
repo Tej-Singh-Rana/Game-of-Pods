@@ -25,10 +25,21 @@ spec:
             - mountPath: /var/www/html/profiles
               name: profile
               subPath: profiles
+            - mountPath: /var/www/html/sites
+              name: site
+              subPath: sites
             - mountPath: /var/www/html/themes
               name: theme
               subPath: themes
       volumes:
+        - name: module
+          emptyDir: {}
+        - name: profile
+          emptyDir: {}
+        - name: site
+          emptyDir: {}
+        - name: theme
+          emptyDir: {}    
         - name: my-vol
           persistentVolumeClaim:
             claimName: drupal-pvc
