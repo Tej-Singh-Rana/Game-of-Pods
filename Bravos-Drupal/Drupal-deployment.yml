@@ -41,7 +41,11 @@ spec:
         - name: theme
           emptyDir: {}  
         - name: data
-          emptyDir: {}  
+          emptyDir: {}
+        - name: hostPath
+          hostPath:
+            path: /drupal-data
+            type: DirectoryOrCreate  
         - name: my-vol
           persistentVolumeClaim:
             claimName: drupal-pvc

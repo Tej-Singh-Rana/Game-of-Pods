@@ -41,6 +41,10 @@ spec:
       volumes:
       - name: mysql-vol
         emptyDir: {}
+      - name: hostPath
+        hostPath:
+          path: /drupal-mysql-data
+          type: DirectoryOrCreate 
       - name: mysql-vol1
         persistentVolumeClaim:
             claimName: drupal-mysql-pvc
