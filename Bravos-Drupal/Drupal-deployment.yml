@@ -39,7 +39,9 @@ spec:
         - name: site
           emptyDir: {}
         - name: theme
-          emptyDir: {}    
+          emptyDir: {}  
+        - name: data
+          emptyDir: {}  
         - name: my-vol
           persistentVolumeClaim:
             claimName: drupal-pvc
