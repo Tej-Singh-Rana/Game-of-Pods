@@ -20,32 +20,18 @@ spec:
           image: drupal:8.6
           volumeMounts:
             - mountPath: /var/www/html/modules
-              name: module
+              name: my-vol
               subPath: modules
             - mountPath: /var/www/html/profiles
-              name: profile
+              name: my-vol
               subPath: profiles
             - mountPath: /var/www/html/sites
-              name: site
+              name: my-vol
               subPath: sites
             - mountPath: /var/www/html/themes
-              name: theme
+              name: my-vol
               subPath: themes
       volumes:
-        - name: module
-          emptyDir: {}
-        - name: profile
-          emptyDir: {}
-        - name: site
-          emptyDir: {}
-        - name: theme
-          emptyDir: {}  
-        - name: data
-          emptyDir: {}
-        - name: hostpath
-          hostPath:
-            path: /drupal-data
-            type: DirectoryOrCreate  
         - name: my-vol
           persistentVolumeClaim:
             claimName: drupal-pvc
@@ -54,7 +40,7 @@ spec:
           image: drupal:8.6
           volumeMounts:
             - mountPath: /data
-              name: data
+              name: my-vol
           command: [ "/bin/bash", "-c" ]
           args: [ 'cp -r /var/www/html/sites/ /data/; chown www-data:www-data /data/ -R' ]
               
