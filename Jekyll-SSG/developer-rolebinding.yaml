@@ -8,5 +8,8 @@ subjects:
     name: drogo
     apiGroup: rbac.authorization.k8s.io
 roleRef:
-  kind: RoleBinding
+    kind: Role
+    name: developer-role
+    apiGroup: rbac.authorization.k8s.io
+   
    
