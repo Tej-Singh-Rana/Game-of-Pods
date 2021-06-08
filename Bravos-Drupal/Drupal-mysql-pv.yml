@@ -11,3 +11,4 @@ spec:
   persistentVolumeReclaimPolicy: Recycle
   hostPath:                # drupal-mysql-pv with hostPath
     path: "/drupal-mysql-data"
+    type: DirectoryOrCreate
